@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">GitHubAssignment</string>
+    <string name="add_repository">Add Repository</string>
+    <string name="name">Name</string>
+    <string name="description">Description</string>
+    <string name="unable_to_load">Unable to load URL</string>
+    <string name="repositories">Repositories</string>
 </resources>
