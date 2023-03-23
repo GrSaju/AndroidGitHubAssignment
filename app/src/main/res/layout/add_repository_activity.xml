@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/add_repository"
+            android:textColor="@color/pale_dark_blue"
+            android:gravity="center"
+            android:textAllCaps="true"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:fontFamily="@font/manrope_bold"
+            android:textSize="@dimen/_17sdp"/>
+
+    <RelativeLayout
+        android:id="@+id/layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvTitle"
+        android:layout_marginTop="@dimen/_50sdp">
+
+        <LinearLayout
+            android:id="@+id/llEditTexts"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/etRepName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:paddingTop="@dimen/_15sdp"
+                android:paddingBottom="@dimen/_15sdp"
+                android:backgroundTint="@color/pale_blue"
+                android:textColorHint="@color/light_black"
+                android:fontFamily="@font/manrope_regular"
+                android:background="@drawable/rectangle_border_corner"
+                android:gravity="start|center"
+                android:hint="@string/enter_name"
+                android:paddingStart="@dimen/_10sdp"
+                android:paddingEnd="@dimen/_10sdp"
+                android:singleLine="true"
+                android:textColor="@color/navy_blue"
+                android:textSize="@dimen/_12sdp"
+                android:visibility="visible" />
+
+            <EditText
+                android:id="@+id/etOwnerName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:paddingTop="@dimen/_15sdp"
+                android:paddingBottom="@dimen/_15sdp"
+                android:backgroundTint="@color/pale_blue"
+                android:fontFamily="@font/manrope_regular"
+                android:gravity="start|center"
+                android:background="@drawable/rectangle_border_corner"
+                android:hint="@string/enter_owner_name"
+                android:textColorHint="@color/light_black"
+                android:paddingStart="@dimen/_10sdp"
+                android:paddingEnd="@dimen/_10sdp"
+                android:singleLine="true"
+                android:textColor="@color/navy_blue"
+                android:textSize="@dimen/_12sdp"
+                android:visibility="visible" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tvAddBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/layout"
+        android:layout_gravity="end"
+        android:layout_marginStart="@dimen/_20sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:background="@drawable/rectangle_border_corner"
+        android:backgroundTint="@color/pale_dark_blue"
+        android:fontFamily="@font/manrope_regular"
+        android:gravity="center"
+        android:paddingLeft="@dimen/_25sdp"
+        android:paddingRight="@dimen/_25sdp"
+        android:paddingVertical="@dimen/_7sdp"
+        android:text="@string/add"
+        android:textAllCaps="true"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_13sdp"
+        android:visibility="visible" />
+
+</RelativeLayout>

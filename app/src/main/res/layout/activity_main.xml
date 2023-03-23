@@ -5,13 +5,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".view.MainActivity">
 
     <TextView
         android:id="@+id/tvRepositoryLabel"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/repositories"
+        android:textAllCaps="true"
         android:fontFamily="@font/manrope_bold"
         android:textColor="@color/pale_dark_blue"
         android:textSize="@dimen/_17sdp"
@@ -26,30 +27,31 @@
         android:layout_alignParentBottom="true"
         android:orientation="vertical">
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/add_repository"
-            android:fontFamily="@font/manrope_bold"
-            android:layout_marginTop="@dimen/_20sdp"
-            android:layout_marginEnd="@dimen/_10sdp"
-            android:textColor="@color/pale_dark_blue"
-            android:gravity="end"/>
-
-        <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:id="@+id/fab"
+        <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+            android:id="@+id/fabAddRep"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="end|bottom"
-            android:src="@drawable/baseline_add_24"
+            app:icon="@drawable/baseline_add_24"
+            app:iconTint="@color/navy_blue"
+            android:text="@string/add_repository"
+            android:textColor="@color/navy_blue"
+            android:fontFamily="@font/manrope_regular"
             android:layout_marginHorizontal="@dimen/_10sdp"
-            android:layout_marginBottom="@dimen/_20sdp"
-            android:layout_marginTop="@dimen/_5sdp"
-            app:rippleColor="@color/navy_blue"
-            android:contentDescription="@string/add_repository" />
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            app:rippleColor="@color/navy_blue"/>
 
     </LinearLayout>
 
+    <ProgressBar
+        android:id="@+id/pbLoading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        android:visibility="gone"
+        android:progressDrawable="@drawable/custom_progress_bg" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rrRepositoryList"
@@ -59,5 +61,17 @@
         android:layout_below="@+id/tvRepositoryLabel"
         android:layout_marginTop="@dimen/_20sdp"
         android:layout_marginBottom="0dp" />
+
+    <TextView
+        android:id="@+id/tvNoRepositoryLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="No Rpositories found"
+        android:fontFamily="@font/manrope_bold"
+        android:visibility="gone"
+        android:textColor="@color/pale_dark_blue"
+        android:textSize="@dimen/_17sdp"
+        android:layout_marginTop="@dimen/_26sdp"
+        android:gravity="center"/>
 
 </RelativeLayout>

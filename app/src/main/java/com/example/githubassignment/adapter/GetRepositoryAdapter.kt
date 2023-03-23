@@ -10,7 +10,7 @@ import android.view.ViewGroup
 import android.widget.RelativeLayout
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.example.githubassignment.Interface.ShareLinkInterface
+import com.example.githubassignment.view.MainActivity
 import com.example.githubassignment.R
 import com.example.githubassignment.roomDatabase.TblRepositoryList
 import com.google.android.material.card.MaterialCardView
@@ -19,7 +19,7 @@ import java.util.*
 class GetRepositoryAdapter(
     private val contexts: Context,
     private var tblRepositoryLists: ArrayList<TblRepositoryList>,
-    private var shareLinkInterface: ShareLinkInterface,
+    private var shareLinkInterface: MainActivity,
     ) :
 
     RecyclerView.Adapter<GetRepositoryAdapter.MyViewHolder?>() {
@@ -40,7 +40,7 @@ class GetRepositoryAdapter(
         }
 
         holder.shareBtn!!.setOnClickListener {
-            shareLinkInterface.shareLink(tblRepositoryLists[i].htmlUrl)
+            shareLinkInterface.shareLink(tblRepositoryLists[i].htmlUrl, tblRepositoryLists[i].repositoryName)
         }
 
         holder.cvLayout!!.setOnClickListener {
