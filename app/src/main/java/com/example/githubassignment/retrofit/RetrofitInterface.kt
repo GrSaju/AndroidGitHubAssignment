@@ -12,7 +12,7 @@ interface RetrofitInterface {
     @GET("users/{user}/repos")
     fun getProfileObserve(@Path("user") user:String): Observable<List<GetRepositoryResponseModel>>
 
-    @Headers("Authorization: Bearer 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")
+    @Headers("Authorization: Bearer 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")
     @POST("user/repos")
     fun createRepository(@Body createRepositoryRequestModel: CreateRepositoryRequestModel): Observable<CreateRepositoryResponseModel>
 

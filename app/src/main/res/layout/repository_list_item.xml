@@ -9,10 +9,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="@dimen/_10sdp"
-        app:cardBackgroundColor="@color/pale_blue"
+        app:cardBackgroundColor="@color/card_color"
         android:layout_marginRight="@dimen/_10sdp"
         android:layout_marginTop="@dimen/_5sdp"
-        app:rippleColor="@color/navy_blue"
+        app:rippleColor="@color/btn_txt_color"
         app:cardCornerRadius="@dimen/_8sdp">
 
       <LinearLayout
@@ -40,7 +40,7 @@
                       android:layout_height="wrap_content"
                       android:text="@string/name"
                       android:textSize="@dimen/_14sdp"
-                      android:textColor="@color/pale_dark_blue"
+                      android:textColor="@color/btn_txt_color"
                       android:fontFamily="@font/manrope_bold"/>
 
                   <TextView
@@ -48,7 +48,7 @@
                       android:layout_width="match_parent"
                       android:layout_height="wrap_content"
                       android:text="@string/description"
-                      android:textColor="@color/navy_blue"
+                      android:textColor="@color/btn_txt_color"
                       android:maxLines="2"
                       android:layout_marginTop="@dimen/_5sdp"
                       android:textSize="@dimen/_13sdp"
@@ -67,7 +67,8 @@
                   <ImageView
                       android:layout_width="@dimen/_20sdp"
                       android:layout_height="@dimen/_20sdp"
-                      android:src="@drawable/shared"/>
+                      android:src="@drawable/baseline_share_24"
+                      app:tint="@color/btn_txt_color" />
 
               </RelativeLayout>
 

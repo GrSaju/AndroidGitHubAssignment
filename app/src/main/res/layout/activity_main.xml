@@ -5,6 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/background"
     tools:context=".view.MainActivity">
 
     <TextView
@@ -14,7 +15,7 @@
         android:text="@string/repositories"
         android:textAllCaps="true"
         android:fontFamily="@font/manrope_bold"
-        android:textColor="@color/pale_dark_blue"
+        android:textColor="@color/btn_txt_color"
         android:textSize="@dimen/_17sdp"
         android:layout_marginTop="@dimen/_15sdp"
         android:gravity="center"/>
@@ -33,14 +34,14 @@
             android:layout_height="wrap_content"
             android:layout_gravity="end|bottom"
             app:icon="@drawable/baseline_add_24"
-            app:iconTint="@color/navy_blue"
+            app:iconTint="@color/background"
             android:text="@string/add_repository"
-            android:textColor="@color/navy_blue"
+            android:textColor="@color/background"
             android:fontFamily="@font/manrope_regular"
             android:layout_marginHorizontal="@dimen/_10sdp"
             android:layout_marginBottom="@dimen/_10sdp"
             android:layout_marginTop="@dimen/_10sdp"
-            app:rippleColor="@color/navy_blue"/>
+            app:rippleColor="@color/btn_txt_color"/>
 
     </LinearLayout>
 

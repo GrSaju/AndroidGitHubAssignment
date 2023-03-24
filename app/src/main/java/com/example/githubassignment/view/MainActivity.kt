@@ -39,7 +39,6 @@ class MainActivity : AppCompatActivity(), ShareLinkInterface {
     private val user = "GrSaju"
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-//        binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(R.layout.activity_main)
 
         rrRepositoryList = findViewById(R.id.rrRepositoryList)
@@ -62,6 +61,7 @@ class MainActivity : AppCompatActivity(), ShareLinkInterface {
     private fun initialWorks() {
         offlineRoomDatabase = OfflineRoomDatabase.getDataBaseInstance(this)
         getRepositoryAPI()
+
     }
 
 
